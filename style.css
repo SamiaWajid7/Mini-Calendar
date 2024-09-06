@@ -1,0 +1,89 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d0e4f7;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+  }
+  
+  /* Container for the entire calendar */
+  .cal-container {
+    display: flex;
+    justify-content: space-between;  
+    border-radius: 15px;  
+    overflow: hidden;  
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  
+    max-width: 90%;
+    max-height: 300px;  
+  }
+  
+  /* Styling for the left column */
+  .left-col {
+    background-color: #ffffff;   
+    padding: 30px;  
+    width: 50%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #date {
+    font-size: 80px;  
+    font-weight: bold;  
+    color: #333;  
+  }
+  
+  #day {
+    font-size: 24px;  
+    color: #666666;
+  }
+  
+  /* Styling for the right column  */
+  .right-col {
+    background-color: #30465b;  
+    padding: 35px;
+    width: 50%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #ffffff;  
+  }
+  
+  #month {
+    font-size: 24px;  
+    font-weight: bold;  
+    color: #ffffff;  
+  }
+  
+  #year {
+    font-size: 24px;  
+    color: #ffffff;  
+  }
+  
+  .left-col > *, .right-col > * {
+    margin-bottom: 8px; 
+  }
+  
+  /* Add media query for responsiveness */
+  @media (max-width: 768px) {
+    .cal-container {
+      flex-direction: column;  
+      max-height: none; 
+    }
+  
+    .left-col, .right-col {
+      width: 100%;  
+    }
+  }
+  
